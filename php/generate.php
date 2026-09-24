@@ -42,10 +42,11 @@ require $bootstrap;
 
 if (!class_exists('Kirby\Cms\App')) {
 	$autoload = $root . '/vendor/autoload.php';
-	if (! is_file($bootstrap)) {
+	if (! is_file($autoload)) {
 		fwrite(STDERR, "Not a Kirby project: no Kirby found in {$root}\n");
 		exit(2);
 	}
+	require_once $autoload;
 }
 
 require __DIR__ . '/Type.php';
