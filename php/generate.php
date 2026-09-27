@@ -38,6 +38,10 @@ if ($bootstrap === null) {
 // Rendering would run the project's routes, and a CLI has no request to serve
 $_ENV['KIRBY_RENDER'] = false;
 
+define('KIRBY_HELPER_DUMP', false);
+define('KIRBY_HELPER_GO', false);
+define('KIRBY_HELPER_E', false);
+
 require $bootstrap;
 
 if (!class_exists('Kirby\Cms\App')) {
